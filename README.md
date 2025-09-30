@@ -84,6 +84,7 @@ Pandas – Data cleaning & display
 
 Custom CSS – Modern gradients, animations, cricket background
 
+
 📁 Project Structure
 cricbuzz_livestats/
 ├── app.py                 # Main application (entry point)
@@ -99,6 +100,10 @@ cricbuzz_livestats/
 │   └── db_connection.py   # DB connection (PostgreSQL + SQLAlchemy)
 └── notebooks/             
     └── data_fetching.ipynb  # Data fetching 
+
+
+
+    
 🎓 Educational Value
 
 Perfect for learning:
