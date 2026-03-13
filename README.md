@@ -1,144 +1,326 @@
-🏏 Cricbuzz LiveStats: Real-Time Cricket Dashboard & SQL Analytics
+# 🏏 Cricbuzz LiveStats
 
-A modern cricket analytics dashboard that integrates live data from the Cricbuzz API with PostgreSQL database operations, featuring stylish UI, CRUD management, and 25+ SQL queries for analytics.
+### Real-Time Cricket Dashboard & SQL Analytics
 
-🚀 Quick Start
+**Cricbuzz LiveStats** is a modern cricket analytics dashboard that integrates **real-time match data from the Cricbuzz API** with **PostgreSQL database analytics**.
+The project features a **stylish Streamlit interface**, **CRUD operations**, and **25+ SQL queries** designed to explore cricket statistics and trends.
 
-Clone Repository & Install Dependencies:
+This project demonstrates the integration of **API data, relational databases, analytics queries, and interactive dashboards**.
 
+---
+
+# 📌 Project Overview
+
+Cricbuzz LiveStats provides a comprehensive platform to:
+
+* Track **live cricket match scores**
+* Explore **player statistics**
+* Perform **SQL-based cricket analytics**
+* Manage **player and match data**
+* Visualize sports data through an interactive dashboard
+
+The system combines **real-time API data with structured database analytics** to deliver both **live insights and historical analysis**.
+
+---
+
+# 🚀 Quick Start
+
+## 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/cricbuzz-livestats.git
+cd cricbuzz-livestats
+```
+
+---
+
+## 2️⃣ Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-Setup Database (PostgreSQL):
+---
 
-Create database Cricbuzz
+## 3️⃣ Setup PostgreSQL Database
 
-Import schema and tables from /utils/db_connection.py
+Create a database named:
 
-Run Application:
+```
+Cricbuzz
+```
 
-cd cricbuzz_livestats
+Then import the schema and tables defined in:
+
+```
+utils/db_connection.py
+```
+
+---
+
+## 4️⃣ Run the Application
+
+```bash
 streamlit run app.py
+```
 
+---
 
-Open Browser:
-Navigate to 👉 http://localhost:8501
+## 5️⃣ Open the Dashboard
 
-🎯 Features
+Navigate to:
 
-📺 Live Matches – Real-time score updates with Cricbuzz API
+```
+http://localhost:8501
+```
 
-📊 Player Stats – Batting & bowling career insights with ICC rankings
+---
 
-🔍 25+ SQL Queries – Beginner to advanced analytics (runs, wickets, trends)
+# 🎯 Key Features
 
-🛠️ CRUD Operations – Add, update, delete player & match records
+### 📺 Live Match Tracking
 
-🖼️ Modern UI – Gradient themes + cricket stadium background 🏟️
+Fetch real-time match scores and updates using the **Cricbuzz API via RapidAPI**.
 
-📱 Responsive Design – Clean dashboard layout with animations
+### 📊 Player Statistics
 
-🏗️ Architecture
+View player performance data including **batting stats, bowling stats, and ICC rankings**.
 
-Frontend: Streamlit + custom CSS (hero banners, cards, animations)
+### 🔍 SQL Analytics (25+ Queries)
 
-Backend: PostgreSQL (players, matches, scorecards, stats)
+Explore cricket insights through **SQL queries ranging from beginner to advanced level**.
 
-API: Cricbuzz (via RapidAPI) → Live matches & player stats
+### 🛠️ CRUD Operations
 
-Analytics: 25 SQL queries (Beginner → Advanced)
+Manage database records with the ability to:
 
-Visualization: Pandas + Streamlit DataFrames (future: Plotly/Matplotlib)
+* Add players and matches
+* Update existing records
+* Delete records
+* View stored data
 
-📊 SQL Query Categories
-🟢 Beginner (1–8)
+### 🎨 Modern UI
 
-Simple SELECT, WHERE, GROUP BY
+The dashboard includes:
 
-Aggregations like runs, wickets, averages
+* Gradient UI themes
+* Cricket stadium background
+* Animated hero sections
+* Interactive dashboard layout
 
-🟡 Intermediate (9–16)
+### 📱 Responsive Dashboard
 
-JOINs, subqueries, multi-table analysis
+Clean layout designed for readability and smooth navigation.
 
-Player vs series breakdowns
+---
 
-🔴 Advanced (17–25)
+# 🏗️ System Architecture
 
-Window functions, CTEs, ranking queries
+**Frontend**
 
-Performance trends across formats (ODI, Test, T20)
+* Streamlit
+* Custom CSS styling
+* Hero banners and UI animations
 
-🛠️ Tech Stack
+**Backend**
 
-Python 3.9+
+* PostgreSQL database
+* Structured tables for players, matches, and statistics
 
-Streamlit – Interactive dashboard
+**API Integration**
 
-PostgreSQL – Relational database
+* Cricbuzz API (via RapidAPI)
 
-SQLAlchemy / psycopg2 – DB connection & queries
+**Analytics Layer**
 
-Cricbuzz API (RapidAPI) – Real-time cricket data
+* 25 SQL queries for statistical analysis
 
-Pandas – Data cleaning & display
+**Data Processing**
 
-Custom CSS – Modern gradients, animations, cricket background
+* Pandas for cleaning and displaying data
 
+---
 
-📁 Project Structure
+# 📊 SQL Query Categories
+
+The project contains **25 SQL queries** categorized by difficulty level.
+
+---
+
+## 🟢 Beginner Queries (1–8)
+
+* Basic `SELECT` statements
+* `WHERE` filters
+* `GROUP BY` aggregations
+* Simple statistical calculations
+
+Example insights:
+
+* Total runs scored by players
+* Average runs per format
+* Wicket totals
+
+---
+
+## 🟡 Intermediate Queries (9–16)
+
+* `JOIN` operations across multiple tables
+* Subqueries
+* Series-based performance analysis
+
+Example insights:
+
+* Player performance by series
+* Match statistics by team
+* Player comparisons
+
+---
+
+## 🔴 Advanced Queries (17–25)
+
+* Window functions
+* Common Table Expressions (CTEs)
+* Ranking and performance trends
+
+Example insights:
+
+* Top performers across formats
+* Player rankings based on performance metrics
+* Trend analysis over seasons
+
+---
+
+# 🧰 Tech Stack
+
+**Programming Language**
+
+* Python 3.9+
+
+**Web Framework**
+
+* Streamlit
+
+**Database**
+
+* PostgreSQL
+
+**Database Tools**
+
+* SQLAlchemy
+* psycopg2
+
+**Data Processing**
+
+* Pandas
+
+**API Integration**
+
+* Cricbuzz API (RapidAPI)
+
+**Visualization**
+
+* Streamlit DataFrames
+* Future integration with Plotly / Matplotlib
+
+**UI Styling**
+
+* Custom CSS
+* Gradient themes
+* Animated UI elements
+
+---
+
+# 📁 Project Structure
+
+```
 cricbuzz_livestats/
-├── app.py                 # Main application (entry point)
-├── requirements.txt       # Dependencies
-├── pages/                 # Streamlit pages
-│   ├── home.py            # Hero + Overview + Navigation
-│   ├── live_matches.py    # Live Cricbuzz API integration
-│   ├── top_stats.py       # Player stats + ICC rankings
-│   ├── sql_queries.py     # 25 SQL analytics queries
-│   └── crud_operations.py # CRUD operations (PostgreSQL)
-├── utils/                 
-│   ├── api_utils.py       # Cricbuzz API management
-│   └── db_connection.py   # DB connection (PostgreSQL + SQLAlchemy)
-└── notebooks/             
-    └── data_fetching.ipynb  # Data fetching 
+│
+├── app.py                      # Main Streamlit application
+├── requirements.txt            # Python dependencies
+│
+├── pages/                      # Streamlit multipage app
+│   ├── home.py                 # Homepage & navigation
+│   ├── live_matches.py         # Live Cricbuzz API integration
+│   ├── top_stats.py            # Player statistics & rankings
+│   ├── sql_queries.py          # SQL analytics queries
+│   └── crud_operations.py      # CRUD operations
+│
+├── utils/
+│   ├── api_utils.py            # Cricbuzz API utilities
+│   └── db_connection.py        # PostgreSQL connection setup
+│
+└── notebooks/
+    └── data_fetching.ipynb     # Data fetching and experimentation
+```
 
+---
 
+# 🔑 API Configuration
 
-    
-🎓 Educational Value
+The **RapidAPI key** is configured directly in the code.
 
-Perfect for learning:
+Update your API key in:
 
-✅ SQL – 25 queries from basic to advanced
+```
+utils/api_utils.py
+```
 
-✅ API Integration – Cricbuzz REST API
+Example configuration:
 
-✅ Database Design – Cricket schema in PostgreSQL
-
-✅ Web Development – Streamlit apps with CSS styling
-
-✅ Data Analytics – Sports insights (runs, wickets, trends)
-
-🔑 API Configuration
-
-API key is loaded directly in code (no .env needed).
-Update in utils/api_utils.py:
-
+```python
 self.headers = {
     "X-RapidAPI-Key": "YOUR_RAPIDAPI_KEY_HERE",
     "X-RapidAPI-Host": "cricbuzz-cricket.p.rapidapi.com"
 }
+```
 
-🎨 UI Highlights
+---
 
-🎨 Gradient Sidebar + Hero Banner
+# 🎨 UI Highlights
 
-🏏 Animated Cricket Ball in Hero Section
+* Gradient sidebar navigation
+* Animated cricket-themed hero section
+* Interactive dashboard cards
+* Smooth hover animations
+* Cricket stadium background
 
-📊 Interactive Cards & Sections
+The design focuses on **modern aesthetics while maintaining usability**.
 
-✨ Hover Animations + Modern Aesthetic
+---
 
-👨‍💻 Author
+# 🎓 Educational Value
 
-💡 Built with ❤️ by Sanjay Kannan
-For cricket enthusiasts & data science learners
+This project is useful for learning:
+
+* SQL query development
+* API integration in Python
+* Database design using PostgreSQL
+* Building multipage Streamlit dashboards
+* Sports data analytics
+* Interactive UI design with CSS
+
+It serves as a **complete end-to-end data analytics project combining API, database, and visualization layers**.
+
+---
+
+# 🚀 Future Enhancements
+
+Potential improvements include:
+
+* Real-time chart visualizations using **Plotly**
+* Machine learning models for **match prediction**
+* Player performance forecasting
+* Cloud deployment
+* User authentication system
+
+---
+
+# 👨‍💻 Author
+
+**Sanjay Kannan**
+
+Data Analytics | Python | SQL | Streamlit Developer
+
+Built with ❤️ for **cricket enthusiasts and data science learners**.
+
+
